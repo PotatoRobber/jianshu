@@ -1,7 +1,12 @@
 {
   "name": "jianshu",
   "version": "0.1.0",
+  "homepage": "https://PotatoRobber.github.io/jianshu",
   "private": true,
+  "devDependencies": {
+  	"gh-pages": "^1.1.0",
+  	"react-scripts": "0.7.0"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "immutable": "^4.0.0-rc.12",
@@ -20,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",   // 对应的deploy之前的钩子
+    "deploy": "gh-pages -d build" 
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +37,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "homepage": "./"
 }
